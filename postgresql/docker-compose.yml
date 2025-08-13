@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   postgres:
     image: postgres:17
@@ -13,3 +11,9 @@ services:
       - "${POSTGRES_PORT}:5432"
     volumes:
       - /opt/postgres-data:/var/lib/postgresql/data
+    networks:
+      - shiba_network
+
+networks:
+  shiba_network:
+    external: true

@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   redis:
     image: redis:8.2
@@ -10,3 +8,9 @@ services:
       - "${REDIS_PORT}:6379"
     volumes:
       - /opt/redis-data:/data
+    networks:
+      - shiba_network
+
+networks:
+  shiba_network:
+    external: true
