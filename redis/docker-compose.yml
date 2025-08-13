@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  redis:
+  image: redis:7.2
+  container_name: redis_server
+  restart: unless-stopped
+  command: [ "redis-server", "--appendonly", "yes" ]
+  ports:
+    - "${REDIS_PORT}:6379"
+  volumes:
+    - /opt/redis-data:/data

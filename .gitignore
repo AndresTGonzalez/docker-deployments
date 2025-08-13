@@ -1,0 +1,11 @@
+.env
+.env.prod
+.env.dev
+.env.test
+.env.local
+.env.development
+.env.production
+.env.test
+.env.local
+.env.development
+.env.production
